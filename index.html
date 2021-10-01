@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/index.css">
+
+    <link rel="shortcut icon" href="images/Logo.svg"> <!--  Icon in title  -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- Links google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <title>Jacob Voisey</title>
+</head>
+<body class="">
+    <button class="photo-viewer hidden" onclick="dontShow()" id="photoViewer">
+        <img src="" alt="" id="selectedPhoto">
+    </button>
+
+    <button onclick="toggleNav()" class="nav-button">
+        <div class="nav-button__bar nav-button__bar--top" id="navTopBar"></div>
+        <div class="nav-button__bar nav-button__bar--middle" id="navMiddleBar"></div>
+        <div class="nav-button__bar nav-button__bar--bottom" id="navBottomBar"></div>
+    </button>
+
+    <button class="color-toggle" onclick="colorToggle()">Color toggle</button>
+
+    <div class="nav hidden" id="nav">
+        <div class="nav__links">
+            <button onclick="scrollToAbout()"><h2 id="navAbout">About</h2></button>
+            <button onclick="scrollToWebsites()"><h2 id="navWebsites">Websites</h2></button>
+            <button onclick="scrollToPhotos()"><h2 id="navPhotos">Photos</h2></button>
+        </div>
+    </div>
+
+    <div class="land">
+        <div class="land__container">
+            <svg class="land__container__j" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 334.65 624.71"><title>Untitled-1</title><path d="M405.64,204.31V187.65H667.32v16.66H645.26q-37.39,0-54.5,22.07Q579.94,240.8,580,295.74V594.36q0,68.91-15.09,111.7t-52,74.54q-36.95,31.75-89.18,31.75-42.35,0-66.66-20.94t-24.32-48q0-22.07,11.26-33.33,14.85-14,34.68-14a39.63,39.63,0,0,1,25.89,9.46q11.49,9.45,29.06,50.44,10.35,24.33,26.57,24.33,12.17,0,22.74-14.87t10.59-52.69V295.74q0-46.38-5.86-61.25-4.5-11.25-18.91-19.37a82.86,82.86,0,0,0-41-10.81Z" transform="translate(-332.68 -187.65)"/></svg>
+            <h1 class="land__container__jacob">Jacob</h1>
+            
+            <svg class="land__container__v" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186.57 180.2"><title>Untitled-1</title><path d="M602.24,341.29v4.81q-9.35,1.68-14.16,6-6.89,6.38-12.21,19.49L514.42,521.49h-4.81l-66-151.88q-5.07-11.69-7.15-14.29a22.84,22.84,0,0,0-8-6.3q-4.74-2.28-12.79-2.92v-4.81h72v4.81q-12.21,1.17-15.85,4.15a9.51,9.51,0,0,0-3.64,7.67q0,6.49,6,20.27L519,481.47l41.58-102q6.11-15.08,6.1-20.92c0-2.51-1.25-4.92-3.76-7.21s-6.76-3.92-12.74-4.87c-.43-.09-1.17-.22-2.2-.39v-4.81Z" transform="translate(-415.68 -341.29)"/></svg>
+            <h1 class="land__container__voisey">Voisey</h1>
+            
+            <div class="land__container__info">
+                <button onclick="scrollToWebsites()"><h2>Web Development</h2></button>
+                <button onclick="scrollToPhotos()"><h2>Photography</h2></button>
+                <h2>Graphic Design</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="separator">
+        <svg class="separator__wave"viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)"/>
+        </svg>
+    </div>
+
+    <section id="about">
+        <div class="text-container">
+            <h1>About me</h1>
+            
+            <p>I'm an aspiring web developer with some amateur experience in photography and graphic design. I got interested in the web ever since I created my first html file in my digital technologies class at the beginning of high school. I have spent the past few years learning about creating responsive websites with html and css and just recently started using some pretty basic javascript.</p>
+            <p>I am currently working full time at a caravan parts company called CAMEC as a warehouse storeman, shipping goods out to customers. I am looking foward to moving onto a career more focused on the web and making it just a little bit more awesome.</p>
+            <p>Feel free to check out some of my work further down.</p>
+        </div>
+    </section>
+
+    <div class="separator">
+        <svg class="separator__wave"viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)"/>
+        </svg>
+    </div>
+
+    <section id="websites">
+        <h1>Websites</h1>
+
+        <div class="gallery">
+            <div class="gallery__card">
+                <h2><a href="http://addogwalking.com" target="_blank">addogwalking.com</a></h2>
+                
+                <div class="gallery__card__container">
+                    <a href="http://addogwalking.com" target="_blank"><img src="images/website-screenshots/addogwalking.jpg" alt="addogwalking.com"></a>
+                    <p>This is the first website I made to go live onto the internet for my fiance so she could have somewhere to point people for her dog walking business.</p> 
+                    
+                    <p>I'm planning on fully redesigning it becasue the design was pretty basic and it wasnt as responsive as I liked. I have also learnt some new tricks like using scss for drier code and using media queries for more a more responsive website.</p>
+                </div>
+            </div>
+
+            <div class="gallery__card">
+                <h2><a href="http://jacobandaniela.com" target="_blank">jacobandaniela.com</a></h2>
+                
+                <div class="gallery__card__container">
+                    <a href="http://jacobandaniela.com" target="_blank"><img src="images/website-screenshots/jacobandaniela.jpg" alt="jacobandaniela.com"></a>
+                    <p>This is the second website I have put onto the internet made for mine and my fiance's wedding.</p> 
+                    
+                    <p>I am quite proud of how this one turned out asside from the rsvp fourm which I wanted to spend more time on to make it more user friendly but couldn't due to time restraints. I learnt a lot on this one like BEM naming conventions and using the sticky position to keep the location cards fixed while the landing pade scrolled.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="separator">
+        <svg class="separator__wave"viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)"/>
+        </svg>
+    </div>
+
+    <section id="photos">
+        <h1>Photos</h1>
+
+        <p class="center-text">I also do photography as a hobbie with my DSLR and vintage film camera so here are some photos shot and eddited by me.<br><strong>Click or tap a photo to enlarge it</strong></p>
+
+        <div class="gallery">
+            <button onclick="showImg1()"><img src="images/photos/thumbs/img1.jpg" class="vertical" alt="Guitar solo"></button>
+            <button onclick="showImg2()"><img src="images/photos/thumbs/img2.jpg" class="vertical" alt="Tree silhouette"></button>
+            <button onclick="showImg3()"><img src="images/photos/thumbs/img3.jpg" alt="Croud"></button>
+            <button onclick="showImg4()"><img src="images/photos/thumbs/img4.jpg" class="vertical" alt="Tree"></button>
+            <button onclick="showImg5()"><img src="images/photos/thumbs/img5.jpg" alt="Aniela"></button>
+            <button onclick="showImg6()"><img src="images/photos/thumbs/img6.jpg" alt="Guitar close"></button>
+            <button onclick="showImg7()"><img src="images/photos/thumbs/img7.jpg" class="vertical" alt="Skateboarder harsh lighting"></button>
+        </div>
+    </section>
+
+    <div class="separator">
+        <svg class="separator__wave"viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)"/>
+        </svg>
+    </div>
+
+    <footer>
+        <h2>Feel free to contact me</h2>
+        <p><a href="mailto: jacob@d.awson.nz">jacob@d.awson.nz</a></p>
+    </footer>
+
+    <script src="js/colorToggle.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/photoViewer.js"></script>
+</body>
+</html>

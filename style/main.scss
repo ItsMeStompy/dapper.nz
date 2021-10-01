@@ -1,0 +1,326 @@
+:root {
+    font-size: 62.5%;
+    
+    --light-background: #fff;
+    --light-text: #000;
+    --light-200: hsl(20, 100%, 95%);
+    --light-800: hsl(20, 100%, 50%);
+    --light-photo: hsla(20, 100%, 50%, 0.5);
+    --light-nav: hsla(0, 0%, 100%, 0.9);
+    --light-alt: hsl(200, 100%, 1%);
+
+    --dark-background: hsl(200, 100%, 1%);
+    --dark-text: #fff;
+    --dark-200: hsl(200, 100%, 5%);
+    --dark-800: hsl(200, 100%, 30%);
+    --dark-photo: hsla(20, 100%, 50%, 0.5);
+    --dark-nav: hsla(200, 100%, 1%, 0.95);
+    --dark-alt: hsl(20, 100%, 95%);
+
+    --background: var(--light-background);
+    --text: var(--light-text);
+    --color-200: var(--light-200);
+    --color-800: var(--light-800);
+    --photo: var(--light-photo);
+    --nav: var(--light-nav);
+    --alt-mode: var(--light-alt);
+}
+
+.dark-mode {
+    --background: var(--dark-background);
+    --text: var(--dark-text);
+    --color-200: var(--dark-200);
+    --color-800: var(--dark-800);
+    --photo: var(--dark-photo);
+    --nav: var(--dark-nav);
+    --alt-mode: var(--dark-alt);
+}
+
+.light-mode {
+    --background: var(--light-background);
+    --text: var(--light-text);
+    --color-200: var(--light-200);
+    --color-800: var(--light-800);
+    --photo: var(--light-photo);
+    --nav: var(--light-nav);
+    --alt-mode: var(--light-alt);
+}
+
+::selection {
+    background-color: var(--light-800);
+    color: #fff;
+}
+
+footer ::selection {
+    background-color: #fff;
+    color: var(--light-800);
+}
+
+strong {
+    font-weight: bolder;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--color-800);
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2 {
+    color: var(--color-800);
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+p {
+    color: var(--text);
+    font-size: 1.75rem;
+    line-height: 1.25em;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.hide {
+    animation: fade-out .5s forwards;
+}
+
+.show {
+    animation: fade-in .5s forwards;
+}
+
+button {
+    border-radius: 1rem;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color .2s ease-in;
+
+    &:hover {
+        background-color: var(--color-200);
+    }
+}
+
+.color-toggle {
+    position: absolute;
+    inset: 0 auto auto 0;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 100vh;
+    background-color: var(--alt-mode);
+    color: var(--color-200);
+
+    &:hover {
+        background-color: var(--alt-mode);
+    }
+}
+
+.nav-button {
+    background-color: var(--color-200);
+    z-index: 100;
+    float: right;
+    position: fixed;
+    width: 3.5rem;
+    height: 3.5rem;
+    right: 0;
+    border: transparent;
+    padding: 2.5rem;
+    margin: 0.75rem 2rem;
+
+    &__bar {
+        position: absolute;
+        width: 70%;
+        margin: auto;
+        height: 0.5rem;
+        background-color: var(--color-800);
+        border-radius: 100rem;
+        transform-origin: center;
+        inset: auto 0;
+        transition: transform .25s ease-in-out, opacity .25s ease-in-out;
+
+        &--top {
+            transform: translate(0, calc(-50% - 1.2rem));
+        }
+
+        &--middle {
+            transform: translate(0, -50%);
+        }
+
+        &--bottom {
+            transform: translate(0, calc(-50% + 1.2rem));
+        }
+    }
+}
+
+.nav{
+    background-color: var(--nav);
+    position: fixed;
+    inset: auto 0;
+
+    &__links {
+        display: flex;
+        justify-content: center;
+
+        button {
+            pointer-events: none;
+
+            h2 {
+                transform: translate(3rem, 0);
+                opacity: 0;
+                margin: 0;
+                padding: 2rem;
+                transition: transform .5s ease, opacity .5s ease;
+            
+            }
+        }
+    }
+}
+
+.shift {
+    pointer-events: initial !important;
+    transform: translate(0, 0) !important;
+    opacity: 1 !important;
+}
+
+.top-rotate {
+    transform: translate(0rem, -50%) rotate(45deg);
+}
+
+.middle-leave {
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.bottom-rotate {
+    transform: translate(0rem, -50%) rotate(-45deg);
+}
+
+.separator {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+
+
+    &:nth-of-type(odd) {
+        --fill: var(--color-200);
+    }
+
+    &:nth-of-type(even) {
+        --fill: var(--background);
+        background-color: var(--color-200);
+
+        .separator__wave {
+            margin-left: -30rem;
+        }
+    }
+
+    &:last-of-type {
+        --fill: var(--color-800);
+        background-color: var(--color-200);
+    }
+
+    &__wave {
+        fill: var(--fill);
+        width: 400%;
+        min-width: calc(150rem * 4);
+        display: block;
+        animation: 60s linear infinite running drift
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        margin-top: -1px;
+        height: 0.5rem;
+        background-color: var(--fill);
+    }
+}
+
+footer {
+    background-color: var(--color-800);
+    padding: 5rem;
+    padding-top: 3rem;
+
+    h2{
+        margin: 0;
+        color: white;
+        font-weight: inherit;
+    }
+
+    a {
+        color: var(--color-200);
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+        background-color: transparent;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes drift {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-25%);
+    }
+}
+
+@media (pointer: coarse), (max-width: 500px) {
+    .nav {
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__links {
+            flex-direction: column;
+            gap: 2vh;
+
+            button {
+
+                h2 {
+                    font-size: 5rem;
+                }
+            }
+        } 
+    }
+}
