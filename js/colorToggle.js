@@ -1,29 +1,35 @@
-// var darkMode = localStorage.getItem('darkMode');
-var darkMode
+var darkMode = localStorage.getItem('darkMode');
 let defaultMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 function enableDarkMode() {
     document.body.classList.add('dark-mode')
-    // localStorage.setItem('darkmode', true)
-    darkMode = true
+    localStorage.setItem('darkMode', 'enabled')
 }
 
-function disableDarkMode () {
+function disableDarkMode() {
     document.body.classList.remove('dark-mode')
-    // localStorage.setItem('darkmode', null)
-    darkMode = null
+    localStorage.setItem('darkMode', 'disabled')
 }
 
-if (defaultMode === true) {
+if (darkMode === 'enabled') {
+    enableDarkMode();
+} else if (darkMode === 'disabled') {
+    disableDarkMode()
+} else if (defaultMode === true) {
     enableDarkMode();
 }
 
-function darkModeToggle() {
-    // darkMode = localStorage.getItem('darkMode');
+console.log(darkMode)
 
-    if (darkMode !== true) {
+
+function darkModeToggle() {
+    darkMode = localStorage.getItem('darkMode');
+
+    if (darkMode !== 'enabled') {
         enableDarkMode()
+        console.log(darkMode)
     } else {
         disableDarkMode()
+        console.log(darkMode)
     }
 }
