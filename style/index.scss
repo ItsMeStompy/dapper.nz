@@ -1,0 +1,221 @@
+.land {
+    height: 100vh;
+    min-height: 55rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: clip;
+
+    &__container {
+        height: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-rows: 5fr 5fr 2fr ;
+        grid-template-areas: "j" "v" "info";
+        align-items: center;
+        justify-content: center;
+        grid-gap: 3rem;
+
+        &__j {
+            grid-area: j;
+        }
+
+        &__v {
+            grid-area: v;
+        }
+
+        &__jacob {
+            grid-area: j;
+        }
+
+        &__voisey {
+            grid-area: v;
+        }
+
+        svg {
+            margin: 0 auto;
+            z-index: -1;
+            height: 100%;
+            max-height: 700rem;
+            fill: var(--color-200);
+        }
+        
+        h1 {
+            margin: auto;
+            padding: 0;
+            text-align: center;
+            font-size: clamp(8rem, calc(1rem + 12vw), 18rem);
+        }
+
+        &__info {
+            grid-area: info;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            gap: 1rem;
+            padding: 2rem;
+            border-radius: 3rem;
+            max-width: max-content;
+
+            h2 {
+                font-size: clamp(2rem, calc(1rem + 3vw), 4rem);
+                margin: 1rem;
+                padding: 0;
+                font-weight: inherit;
+                color: var(--text);
+            }
+        }
+    }
+}
+
+section {
+    margin: 0;
+    padding: 1rem 3rem 2rem 3rem;
+    
+    &:nth-of-type(odd) {
+        background-color: var(--color-200);
+    }
+}
+
+.text-container {
+    max-width: 90rem;
+    margin: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 2rem;
+
+    button:hover {
+        background-color: transparent;
+    }
+
+    img {
+        width: 100%;
+        max-width: 45rem;
+        align-self: center;
+        flex-direction: column;
+    }
+
+    .vertical {
+        max-width: 35rem;
+    }
+
+    &__card {
+        margin-top: 6rem;
+        border-radius: 2rem;
+        max-width: 35rem;
+        background-color: var(--color-200);
+
+        h2 {
+            margin-top: -4.5rem;
+            margin-bottom: 1.7rem;
+        }
+
+        a {
+            color: var(--color-800);            
+        }
+
+        &__container{
+            padding: 2rem;
+            
+            img {
+                box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.8);
+            }
+        
+            p {
+                margin: 2rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.center-text {
+    text-align: center;
+}
+
+.photo-viewer {
+    border-radius: 0;
+    position: fixed;
+    box-sizing: border-box;
+    display: block;
+    background-color: var(--photo);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    
+    img {
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+
+.photo-viewer:hover {
+    background-color: var(--photo);
+}
+
+@media (orientation: landscape) {
+
+    .land {
+        &__container {
+            height: 70%;
+            max-width: 1500px;
+            grid-template-areas: none;
+            grid-gap: initial;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            &__j {
+                grid-row: 1 / 3;
+                grid-column: 1 / 3;
+            }
+    
+            &__v {
+                grid-row: 1 / 3;
+                grid-column: 3 / 5;
+            }
+    
+            &__jacob {
+                grid-row: 1;
+                grid-column: 1 / 3;
+            }
+    
+            &__voisey {
+                grid-row: 1;
+                grid-column: 3 / 5;
+            }
+
+            h1 {
+                font-size: clamp(5rem, calc(1rem + 10vw), 16rem);
+                margin: auto 0 0 0;
+            }
+
+            &__info {
+                margin: auto;
+                grid-row: 2;
+                grid-column: 1 / 6;
+                
+                p {
+                    font-size: clamp(1rem, calc(1rem + 3vw), 3rem);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .photo-viewer {
+        padding: 1rem;
+    }
+}
