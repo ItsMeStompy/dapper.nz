@@ -34,23 +34,23 @@
 }
 
 ::-moz-selection {
-  background-color: var(--light-800);
+  background-color: var(--color-800);
   color: #fff;
 }
 
 ::selection {
-  background-color: var(--light-800);
+  background-color: var(--color-800);
   color: #fff;
 }
 
 footer ::-moz-selection {
   background-color: #fff;
-  color: var(--light-800);
+  color: var(--color-800);
 }
 
 footer ::selection {
   background-color: #fff;
-  color: var(--light-800);
+  color: var(--color-800);
 }
 
 strong {
