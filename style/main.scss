@@ -242,8 +242,7 @@ button {
     }
 }
 
-.nav{
-    background-color: var(--nav);
+.nav {
     position: fixed;
     inset: auto 0;
 
@@ -263,6 +262,25 @@ button {
             
             }
         }
+    }
+}
+
+@supports (backdrop-filter: blur(5px)) {
+    .nav {
+        backdrop-filter: blur(5px);
+
+        &__links {
+
+            button {
+                filter: drop-shadow(0 0 3px var(--background));
+            }
+        }
+    }
+}
+
+@supports not (backdrop-filter: blur(5px)) {
+    .nav {
+    background-color: var(--nav);
     }
 }
 
