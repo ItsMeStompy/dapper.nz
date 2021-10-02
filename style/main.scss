@@ -191,7 +191,7 @@ button {
         border-radius: 50%;
         background-color: var(--color-200);
         transform: translateX(115%);
-        transition: transform 0.5s ease-out;
+        transition: transform 0.3s ease-out;
     }
 }
 
@@ -215,7 +215,6 @@ button {
     border: transparent;
     padding: 2.5rem;
     margin: 0.75rem 2rem;
-    transition: background-color 0s linear;
 
     &__bar {
         position: absolute;
