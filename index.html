@@ -27,7 +27,19 @@
         <div class="nav-button__bar nav-button__bar--bottom" id="navBottomBar"></div>
     </button>
 
-    <button class="color-toggle" onclick="darkModeToggle()">Color toggle</button>
+    <button class="color-toggle enable-dark" id="colorToggle" aria-label="Toggle dark mode" onclick="darkModeToggle()">
+        <div class="color-toggle__sun" id="sun">
+            <div class="color-toggle__sun__ray"></div>
+            <div class="color-toggle__sun__ray"></div>
+            <div class="color-toggle__sun__ray"></div>
+            <div class="color-toggle__sun__ray"></div>
+            <div class="color-toggle__sun__ray"></div>
+            <div class="color-toggle__sun__ray"></div>
+            <div class="color-toggle__sun__ray"></div>
+            <div class="color-toggle__sun__ray"></div>
+        </div>
+        <div class="color-toggle__moon" id="moon"></div>
+    </button>
 
     <div class="nav hidden" id="nav">
         <div class="nav__links">
