@@ -1,0 +1,139 @@
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --color-pale: hsl(225, 100%, 94%);
+    --color-very-pale: hsl(225, 100%, 98%);
+    --color-desaturated: hsl(224, 23%, 55%);
+    --color-bright: hsl(245, 75%, 52%);
+    --color-dark: hsl(223, 47%, 23%);
+}
+
+body {
+    background-image: url("../images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-pale);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.6em;
+}
+
+h1, h4, p {
+    margin: 0;
+    color: var(--color-dark);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    color: var(--color-desaturated);
+    font-weight: 500;
+}
+
+.card {
+    max-width: 44rem;
+    // min-width: 32rem;
+    height: max-content;
+    position: absolute;
+    inset: 0 1.5rem;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 2.5rem;
+    text-align: center;
+
+    .hero {
+        display: block;
+        max-width: 100%;
+        border-radius: 2.5rem 2.5rem 0 0;
+    }
+
+    &__order {
+        padding: 4rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .description {
+            padding: 0 1.5rem;
+            line-height: 1.75;
+        }
+
+        &__container {
+            background-color: var(--color-very-pale);
+            border-radius: 1.5rem;
+            padding: 2.5rem 2.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            &__plan {
+                display: flex;
+                align-items: center;
+                gap: 2.5rem;
+
+                &__selected {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+            }
+
+            button {
+                background-color: transparent;
+                padding: 0;
+                border: none;
+                height: min-content;
+                text-decoration: underline;
+                color: var(--color-bright);
+                font-weight: 700;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: none;
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        a {
+            display: inline-block;
+            border-radius: 1.5rem;
+            width: 100%;
+            text-decoration: none;
+            font-weight: 700;
+
+            &:first-child {
+                margin-top: 1rem;
+                padding: 2rem 0;
+                background-color: var(--color-bright);
+                color: #fff;
+                box-shadow: 0 1.5rem 2rem hsla(245, 75%, 52%, .25);
+                transition: opacity 0.2s ease-out;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+            &:last-child {
+                color: var(--color-desaturated);
+                margin-top: 3rem;
+
+                &:hover {
+                    color: var(--color-dark);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-image: url("../images/pattern-background-desktop.svg");
+    }
+}

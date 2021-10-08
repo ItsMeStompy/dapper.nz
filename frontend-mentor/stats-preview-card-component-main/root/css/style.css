@@ -1,0 +1,168 @@
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --color-very-dark: hsl(233, 47%, 7%);
+  --color-desaturated-dark: hsl(244, 38%, 16%);
+  --color-soft-violet: hsl(277, 64%, 61%);
+}
+
+body {
+  background-color: var(--color-very-dark);
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+#wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: calc(100vh - 2rem);
+  position: relative;
+  padding: 2rem;
+}
+
+span {
+  color: var(--color-soft-violet);
+}
+
+.card {
+  background-color: var(--color-desaturated-dark);
+  max-width: 50rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card__hero {
+  background-image: url("../images/image-header-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-soft-violet);
+  background-blend-mode: multiply;
+  width: 100%;
+  height: 25rem;
+}
+
+.card__hero::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-soft-violet);
+  opacity: 0.3;
+}
+
+.card__text {
+  padding: 4rem 2rem 3rem 2rem;
+}
+
+.card__text h1 {
+  margin-bottom: 2rem;
+  font-size: 2em;
+}
+
+.card__text p {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  letter-spacing: .05rem;
+}
+
+.card__text__numbers {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.card__text__numbers__item h2 {
+  font-size: 1.6em;
+  display: block;
+}
+
+.card__text__numbers__item p {
+  padding: 0;
+  margin: 0;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9em;
+}
+
+@media (min-width: 1000px) and (orientation: landscape) {
+  .card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 15fr 14fr;
+        grid-template-columns: 15fr 14fr;
+        grid-template-areas: "text hero";
+    max-width: 148rem;
+  }
+  .card__hero {
+    background-image: url("../images/image-header-desktop.jpg");
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: hero;
+    width: 100%;
+    height: 100%;
+  }
+  .card__text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+    padding: 13% 18% 12% 13%;
+    text-align: left;
+  }
+  .card__text h1 {
+    font-size: 3.2em;
+  }
+  .card__text p {
+    font-size: 1.3em;
+    padding: 0;
+    margin-top: 3rem;
+  }
+  .card__text__numbers {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 18% 9% 0 0;
+  }
+  .card__text__numbers__item h2 {
+    font-size: 2.1em;
+  }
+  .card__text__numbers__item p {
+    font-size: 1.1em;
+    margin-top: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
