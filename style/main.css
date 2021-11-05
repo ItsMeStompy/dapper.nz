@@ -72,11 +72,6 @@ body * {
   transition: color 0.4s ease-out, fill 0.4s ease-out, background-color 0.4s ease-out;
 }
 
-body section {
-  -webkit-transition: background-color 0.4s ease-out;
-  transition: background-color 0.4s ease-out;
-}
-
 h1 {
   color: var(--color-800);
   font-size: 4rem;
