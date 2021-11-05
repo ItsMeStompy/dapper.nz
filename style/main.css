@@ -149,7 +149,8 @@ button:hover {
   margin: auto;
   border-radius: 50%;
   background-color: var(--alt-mode);
-  outline: 0.3rem solid var(--color-200);
+  -webkit-box-shadow: 0 0 0 0.3rem var(--color-200);
+          box-shadow: 0 0 0 0.3rem var(--color-200);
   -webkit-transition: width 0.3s ease-out, height 0.3s ease-out;
   transition: width 0.3s ease-out, height 0.3s ease-out;
 }

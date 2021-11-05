@@ -21,12 +21,6 @@
         <img src="" alt="" id="selectedPhoto">
     </button>
 
-    <button onclick="toggleNav()" class="nav-button">
-        <div class="nav-button__bar nav-button__bar--top" id="navTopBar"></div>
-        <div class="nav-button__bar nav-button__bar--middle" id="navMiddleBar"></div>
-        <div class="nav-button__bar nav-button__bar--bottom" id="navBottomBar"></div>
-    </button>
-
     <button class="color-toggle enable-dark" id="colorToggle" aria-label="Toggle dark mode" onclick="darkModeToggle()">
         <div class="color-toggle__sun" id="sun">
             <div class="color-toggle__sun__ray"></div>
@@ -39,6 +33,12 @@
             <div class="color-toggle__sun__ray"></div>
         </div>
         <div class="color-toggle__moon" id="moon"></div>
+    </button>
+
+    <button onclick="toggleNav()" class="nav-button">
+        <div class="nav-button__bar nav-button__bar--top" id="navTopBar"></div>
+        <div class="nav-button__bar nav-button__bar--middle" id="navMiddleBar"></div>
+        <div class="nav-button__bar nav-button__bar--bottom" id="navBottomBar"></div>
     </button>
 
     <div class="nav hidden" id="nav">
