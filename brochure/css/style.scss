@@ -1,0 +1,19 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6em;
+}
+
+img {
+    width: min(100vw, 100rem);
+    margin: auto;
+    margin-top: 2vw;
+    padding: 0 1rem;
+}
+
+img:last-of-type {
+    margin-top: 5vw;
+    margin-bottom: 5rem;
+}
