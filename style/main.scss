@@ -1,6 +1,6 @@
 :root {
     font-size: 62.5%;
-    
+
     --light-background: #fff;
     --light-text: #000;
     --light-200: hsl(20, 100%, 95%);
@@ -54,10 +54,10 @@ body {
     padding: 0;
     margin: 0;
     background-color: var(--background);
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     transition: background-color 0.4s ease-out;
-    
+
     * {
         transition: color 0.4s ease-out, fill 0.4s ease-out, background-color 0.4s ease-out;
     }
@@ -65,11 +65,16 @@ body {
 
 h1 {
     color: var(--color-800);
-    font-size: 4rem;
     text-align: center;
 }
 
 h2 {
+    color: var(--color-800);
+    font-size: 4rem;
+    text-align: center;
+}
+
+h3 {
     color: var(--color-800);
     font-size: 2.25rem;
     text-align: center;
@@ -86,11 +91,11 @@ p {
 }
 
 .hide {
-    animation: fade-out .5s forwards;
+    animation: fade-out 0.5s forwards;
 }
 
 .show {
-    animation: fade-in .5s forwards;
+    animation: fade-in 0.5s forwards;
 }
 
 button {
@@ -100,7 +105,7 @@ button {
     margin: 0;
     border: none;
     cursor: pointer;
-    transition: background-color .2s ease-in;
+    transition: background-color 0.2s ease-in;
 
     &:hover {
         background-color: var(--color-200);
@@ -131,8 +136,7 @@ button {
         margin: auto;
         border-radius: 50%;
         background-color: var(--alt-mode);
-        // outline: 0.3rem solid var(--color-200);
-        box-shadow: 0 0 0 0.3rem var(--color-200); // Outline doesn't follow border radius in safari 
+        box-shadow: 0 0 0 0.3rem var(--color-200); // Outline doesn't follow border radius in safari
         transition: width 0.3s ease-out, height 0.3s ease-out;
 
         &__ray {
@@ -222,7 +226,7 @@ button {
         border-radius: 100rem;
         transform-origin: center;
         inset: auto 0;
-        transition: transform .25s ease-in-out, opacity .25s ease-in-out;
+        transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
 
         &--top {
             transform: translate(0, calc(-50% - 1.2rem));
@@ -254,8 +258,7 @@ button {
                 opacity: 0;
                 margin: 0;
                 padding: 2rem;
-                transition: transform .5s ease, opacity .5s ease;
-            
+                transition: transform 0.5s ease, opacity 0.5s ease;
             }
         }
     }
@@ -266,7 +269,6 @@ button {
         backdrop-filter: blur(5px);
 
         &__links {
-
             button {
                 filter: drop-shadow(0 0 3px var(--background));
             }
@@ -276,7 +278,7 @@ button {
 
 @supports not (backdrop-filter: blur(5px)) {
     .nav {
-    background-color: var(--nav);
+        background-color: var(--nav);
     }
 }
 
@@ -306,7 +308,6 @@ button {
     position: relative;
     z-index: -1;
 
-
     &:nth-of-type(odd) {
         --fill: var(--color-200);
     }
@@ -326,15 +327,17 @@ button {
     }
 
     &__wave {
-        fill: var(--fill);
+        display: block;
         width: 400%;
         min-width: calc(150rem * 4);
-        display: block;
+
+        fill: var(--fill);
+
         animation: 60s linear infinite running drift;
     }
 
     &::after {
-        content: '';
+        content: "";
         display: block;
         width: 100%;
         margin-top: -1px;
@@ -349,7 +352,7 @@ footer {
     padding: 5rem;
     padding-top: 3rem;
 
-    h2{
+    h2 {
         margin: 0;
         color: white;
         font-weight: inherit;
@@ -410,11 +413,10 @@ footer {
             gap: 2vh;
 
             button {
-
                 h2 {
                     font-size: 5rem;
                 }
             }
-        } 
+        }
     }
 }

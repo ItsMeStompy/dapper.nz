@@ -1,165 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/index.css">
+        <link rel="stylesheet" href="style/normalize.css" />
+        <link rel="stylesheet" href="style/main.css" />
+        <link rel="stylesheet" href="style/index.css" />
 
-    <link rel="shortcut icon" href="images/Logo.svg"> <!--  Icon in title  -->
+        <link rel="shortcut icon" href="images/Logos/WhiteBackground.svg" />
+        <!--  Icon in title  -->
 
-    <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- Links google font -->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-    <title>Jacob Voisey</title>
-</head>
-<body class="">
-    <button class="photo-viewer hidden" onclick="dontShow()" id="photoViewer">
-        <img src="" alt="" id="selectedPhoto">
-    </button>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <!-- Links google font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
 
-    <button class="color-toggle enable-dark" id="colorToggle" aria-label="Toggle dark mode" onclick="darkModeToggle()">
-        <div class="color-toggle__sun" id="sun">
-            <div class="color-toggle__sun__ray"></div>
-            <div class="color-toggle__sun__ray"></div>
-            <div class="color-toggle__sun__ray"></div>
-            <div class="color-toggle__sun__ray"></div>
-            <div class="color-toggle__sun__ray"></div>
-            <div class="color-toggle__sun__ray"></div>
-            <div class="color-toggle__sun__ray"></div>
-            <div class="color-toggle__sun__ray"></div>
-        </div>
-        <div class="color-toggle__moon" id="moon"></div>
-    </button>
+        <title>Jacob Dawson</title>
+    </head>
+    <body>
+        <button class="photo-viewer hidden" onclick="dontShow()" id="photoViewer">
+            <img src="" alt="" id="selectedPhoto" />
+        </button>
 
-    <button onclick="toggleNav()" class="nav-button">
-        <div class="nav-button__bar nav-button__bar--top" id="navTopBar"></div>
-        <div class="nav-button__bar nav-button__bar--middle" id="navMiddleBar"></div>
-        <div class="nav-button__bar nav-button__bar--bottom" id="navBottomBar"></div>
-    </button>
+        <button class="color-toggle enable-dark" id="colorToggle" aria-label="Toggle dark mode" onclick="darkModeToggle()">
+            <div class="color-toggle__sun" id="sun">
+                <div class="color-toggle__sun__ray"></div>
+                <div class="color-toggle__sun__ray"></div>
+                <div class="color-toggle__sun__ray"></div>
+                <div class="color-toggle__sun__ray"></div>
+                <div class="color-toggle__sun__ray"></div>
+                <div class="color-toggle__sun__ray"></div>
+                <div class="color-toggle__sun__ray"></div>
+                <div class="color-toggle__sun__ray"></div>
+            </div>
+            <div class="color-toggle__moon" id="moon"></div>
+        </button>
 
-    <div class="nav hidden" id="nav">
-        <div class="nav__links">
-            <button onclick="scrollToAbout()"><h2 id="navAbout">About</h2></button>
-            <button onclick="scrollToWebsites()"><h2 id="navWebsites">Websites</h2></button>
-            <button onclick="scrollToPhotos()"><h2 id="navPhotos">Photos</h2></button>
-        </div>
-    </div>
+        <button onclick="toggleNav()" class="nav-button">
+            <div class="nav-button__bar nav-button__bar--top" id="navTopBar"></div>
+            <div class="nav-button__bar nav-button__bar--middle" id="navMiddleBar"></div>
+            <div class="nav-button__bar nav-button__bar--bottom" id="navBottomBar"></div>
+        </button>
 
-    <!-- Testing if all svg elements have a longer fill transition compared to everything else in chrome (they do) -->
-    <!-- <svg class="square" viewBox="0 0 100 100">
-        <rect width="100" height="100"/>
-        <style>
-            .square {
-                position: absolute;
-                z-index: -1;
-                width: 100px;
-                height: 100px;
-                fill: var(--background);
-            }
-        </style>
-    </svg> -->
-
-    <div class="land">
-        <div class="land__container">
-            <svg class="land__container__j" viewBox="0 0 334.65 624.71"><path d="M405.64,204.31V187.65H667.32v16.66H645.26q-37.39,0-54.5,22.07Q579.94,240.8,580,295.74V594.36q0,68.91-15.09,111.7t-52,74.54q-36.95,31.75-89.18,31.75-42.35,0-66.66-20.94t-24.32-48q0-22.07,11.26-33.33,14.85-14,34.68-14a39.63,39.63,0,0,1,25.89,9.46q11.49,9.45,29.06,50.44,10.35,24.33,26.57,24.33,12.17,0,22.74-14.87t10.59-52.69V295.74q0-46.38-5.86-61.25-4.5-11.25-18.91-19.37a82.86,82.86,0,0,0-41-10.81Z" transform="translate(-332.68 -187.65)"/></svg>
-            <h1 class="land__container__jacob">Jacob</h1>
-            
-            <svg class="land__container__v"viewBox="0 0 186.57 180.2"><path d="M602.24,341.29v4.81q-9.35,1.68-14.16,6-6.89,6.38-12.21,19.49L514.42,521.49h-4.81l-66-151.88q-5.07-11.69-7.15-14.29a22.84,22.84,0,0,0-8-6.3q-4.74-2.28-12.79-2.92v-4.81h72v4.81q-12.21,1.17-15.85,4.15a9.51,9.51,0,0,0-3.64,7.67q0,6.49,6,20.27L519,481.47l41.58-102q6.11-15.08,6.1-20.92c0-2.51-1.25-4.92-3.76-7.21s-6.76-3.92-12.74-4.87c-.43-.09-1.17-.22-2.2-.39v-4.81Z" transform="translate(-415.68 -341.29)"/></svg>
-            <h1 class="land__container__voisey">Voisey</h1>
-            
-            <div class="land__container__info">
-                <button onclick="scrollToWebsites()"><h2>Web Development</h2></button>
-                <button onclick="scrollToPhotos()"><h2>Photography</h2></button>
-                <h2>Graphic Design</h2>
+        <div class="nav hidden" id="nav">
+            <div class="nav__links">
+                <button onclick="scrollToAbout()"><h2 id="navAbout">About</h2></button>
+                <button onclick="scrollToWebsites()"><h2 id="navWebsites">Websites</h2></button>
+                <button onclick="scrollToPhotos()"><h2 id="navPhotos">Photos</h2></button>
             </div>
         </div>
-    </div>
 
-    <div class="separator">
-        <svg class="separator__wave" viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)"/>
-        </svg>
-    </div>
+        <div class="land">
+            <div class="land__container">
+                <svg class="land__container__logo" width="1000" height="893.25476" viewBox="0 0 1000 893.25476" version="1.1" id="SVGRoot" sodipodi:docname="Plain.svg" xml:space="preserve" inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                    <sodipodi:namedview id="namedview137" pagecolor="#505050" bordercolor="#eeeeee" borderopacity="1" inkscape:showpageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#505050" inkscape:document-units="px" showgrid="false" inkscape:zoom="0.52724989" inkscape:cx="495.96976" inkscape:cy="470.3652" inkscape:window-width="1920" inkscape:window-height="1017" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1" inkscape:lockguides="false" />
+                    <defs id="defs132"><inkscape:path-effect effect="powerstroke" id="path-effect1798" is_visible="true" lpeversion="1" offset_points="0.099300264,5.5860989 | 1.2284362,23.596061 | 1.8839093,13.580543" not_jump="false" sort_points="true" interpolator_type="CentripetalCatmullRom" interpolator_beta="1" start_linecap_type="zerowidth" linejoin_type="round" miter_limit="4" scale_width="1" end_linecap_type="zerowidth" /><inkscape:path-effect effect="powerstroke" id="path-effect1796" is_visible="true" lpeversion="1" offset_points="0.061734987,6.9550515 | 0.80331077,21.498037 | 1.8178908,5.224531" not_jump="false" sort_points="true" interpolator_type="CentripetalCatmullRom" interpolator_beta="0" start_linecap_type="zerowidth" linejoin_type="round" miter_limit="4" scale_width="1" end_linecap_type="zerowidth" /><inkscape:path-effect effect="skeletal" id="path-effect1794" is_visible="true" lpeversion="1" pattern="M 0,0 H 1" copytype="single_stretched" prop_scale="50" scale_y_rel="false" spacing="3.3" normal_offset="0" tang_offset="0" prop_units="false" vertical_pattern="false" hide_knot="false" fuse_tolerance="1.1" /></defs>
+                    <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(1.7014013e-5)">
+                        <g id="g1373" transform="matrix(1.5562127,0,0,1.5562127,-243.51253,-290.93258)" style="stroke-width: 38.5551; stroke-dasharray: none">
+                            <path style="fill-rule: nonzero; stroke: none; stroke-width: 38.5551; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: none; stroke-dashoffset: 0; stroke-opacity: 1" d="m 460.00507,260.75848 c -1.0282,0.18753 -4.83421,1.04975 -5.96792,6.30423 -0.71692,3.32275 -0.96648,8.945 -0.55965,19.91366 0.44747,12.0645 1.41567,25.61438 2.81355,48.85599 2.26837,37.71477 5.52647,98.89696 2.0633,160.36611 -1.63416,29.00534 -4.72789,57.72283 -9.92212,84.50038 -5.34268,27.54284 -12.6394,51.63998 -22.02286,71.67297 -4.16849,8.89941 -8.65752,16.80143 -13.42944,23.76323 -0.8341,1.21689 -1.68399,2.41627 -2.55008,3.59698 -5.65761,7.71284 -11.99393,14.61292 -19.14078,20.41218 -6.72819,5.45953 -14.2881,10.03754 -22.89613,13.41785 -8.26028,3.24375 -17.74129,5.48537 -28.72494,6.2174 -38.12478,2.61877 -67.54781,-3.12824 -90.65463,-13.63594 -23.34804,-10.6174 -39.93588,-25.97554 -51.96953,-41.31325 -13.99702,-17.84017 -22.27663,-36.40467 -26.38867,-46.22773 -1.59821,-3.81788 -2.959,-7.30008 -3.86784,-9.65365 -4.15128,-10.75022 -6.32572,-12.21843 -7.19373,-12.1493 v 0 c -0.6385,0.0509 -3.61847,1.64395 -3.04247,14.24766 0.1281,2.80302 0.41139,6.52313 1.03348,11.05633 1.56569,11.40925 5.99177,32.95508 18.87421,56.2005 10.93841,19.73757 28.57448,41.6892 56.66143,58.0975 28.0576,16.39115 63.982,25.72903 108.50206,24.4184 15.08355,-0.50812 28.91428,-3.20811 41.53599,-7.77164 13.15727,-4.75716 24.72571,-11.43994 34.83979,-19.41031 10.68,-8.41635 19.63887,-18.18308 27.1729,-28.53112 1.15349,-1.58431 2.27406,-3.18303 3.36272,-4.79354 6.22278,-9.20564 11.75896,-19.2968 16.65199,-30.18073 10.93839,-24.33111 18.49921,-52.26336 23.41813,-82.27332 4.79597,-29.25986 7.00242,-60.03036 7.47407,-90.32256 1.01123,-64.94787 -5.74653,-125.20282 -11.99052,-164.74163 -3.48603,-22.07457 -6.93669,-38.35859 -9.65957,-48.89761 -2.76855,-10.71575 -4.93662,-16.23086 -6.67261,-19.13829 -2.81566,-4.71565 -6.74073,-4.18485 -7.75013,-4.00075 z" id="path500" sodipodi:nodetypes="csc" inkscape:path-effect="#path-effect1796" inkscape:original-d="m 460.00507,260.75848 c 0,0 85.68278,469.7773 -119.35991,479.54124 C 171.6637,748.34646 159.5936,596.79959 159.5936,596.79959" />
+                            <path style="fill-rule: nonzero; stroke: none; stroke-width: 38.5551; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: none; stroke-opacity: 1" d="m 241.40208,402.3368 c 0.56424,0.67092 2.70061,2.66117 10.02255,-0.98809 6.24529,-3.11266 15.03917,-8.75867 37.64235,-23.41705 19.77403,-12.82365 55.90453,-36.30726 96.71797,-59.3505 38.5107,-21.74311 83.59707,-44.5372 129.80815,-61.37486 22.75073,-8.28954 45.17039,-14.91497 66.85036,-19.37486 22.46255,-4.62087 43.38237,-6.76276 62.63653,-6.36388 21.56505,0.20869 38.79826,2.4966 52.48031,6.05361 14.348,3.73015 24.59473,8.80142 31.93403,14.19024 7.7535,5.69294 12.77408,12.10731 16.09684,18.78718 2.3908,4.80633 4.05385,10.06025 5.07111,15.7297 0.55456,3.0907 0.92664,6.38244 1.09797,9.88397 0.49429,10.10255 -0.69309,21.75294 -3.80138,34.92365 -3.08291,13.06318 -7.96616,27.24299 -14.58158,42.33487 -13.41204,30.59711 -33.33097,63.56168 -57.54326,96.64519 -25.39173,34.69508 -54.66969,68.4003 -84.86761,99.07445 -33.79314,34.32608 -67.63715,63.7744 -98.80108,87.76509 -39.95666,30.75952 -73.35905,50.96817 -99.0721,64.64151 -2.30334,1.22484 -4.53927,2.39446 -6.70765,3.51265 -14.7943,7.62911 -27.51233,13.69927 -38.67547,18.54086 -19.85911,8.61314 -34.06533,12.96729 -42.57998,14.44897 8.33652,1.45068 23.80185,4.49215 46.82082,2.12276 12.9513,-1.3331 28.00921,-4.35561 44.96161,-10.07447 2.48559,-0.83851 5.04245,-1.73961 7.67014,-2.70697 29.36413,-10.81014 66.56464,-29.55035 110.05556,-59.69244 33.909,-23.50119 70.35667,-53.0864 106.54993,-88.01736 32.31841,-31.19125 63.7709,-66.03444 91.21831,-102.43236 26.07575,-34.57897 48.35764,-70.33957 63.78882,-104.86162 7.64134,-17.09491 13.65054,-33.99295 17.58656,-50.37958 3.95921,-16.48317 5.87338,-32.66792 5.12013,-48.14436 -0.26296,-5.40274 -0.85155,-10.72893 -1.79573,-15.95466 -1.73447,-9.59981 -4.76973,-19.30673 -9.54644,-28.63744 -6.83324,-13.34789 -16.98336,-25.45858 -31.03326,-35.34098 -13.0312,-9.16588 -28.97609,-16.1114 -48.00094,-20.6447 -18.06904,-4.30555 -39.0949,-6.48037 -63.44554,-6.2726 -23.2019,0.39759 -47.32459,4.00387 -71.99267,10.2325 -23.82041,6.01461 -47.83097,14.39443 -71.51771,24.37929 -47.99526,20.23182 -93.61598,46.61487 -131.40396,71.39627 -41.32493,27.10093 -73.76838,52.5665 -93.06528,68.83322 -19.9844,16.84626 -28.8565,26.08674 -32.69351,30.85157 -5.2151,6.47614 -3.53245,9.05394 -3.0049,9.68123 z" id="path1369" sodipodi:nodetypes="csc" inkscape:path-effect="#path-effect1798" inkscape:original-d="m 241.40208,402.3368 c 0,0 229.6361,-193.12166 403.67793,-193.12166 359.95589,0 -115.86525,548.78436 -339.94987,548.78436" />
+                        </g>
+                    </g>
+                </svg>
+                <h1 class="land__container__jacob">Jacob</h1>
+                <h1 class="land__container__dawson">Dawson</h1>
 
-    <section id="about">
-        <div class="text-container">
-            <h1>About me</h1>
-            
-            <p>I'm an aspiring web developer with some amateur experience in photography and graphic design. I got interested in the web ever since I created my first html file in my digital technologies class at the beginning of high school. I have spent the past few years learning about creating responsive websites with html and css and just recently started using some pretty basic javascript.</p>
-            <p>I am currently working full time at a caravan parts company called CAMEC as a warehouse storeman, shipping goods out to customers. I am looking foward to moving onto a career more focused on the web and making it just a little bit more awesome.</p>
-            <p>Feel free to check out some of my work further down.</p>
-        </div>
-    </section>
-
-    <div class="separator">
-        <svg class="separator__wave" viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)"/>
-        </svg>
-    </div>
-
-    <section id="websites">
-        <h1>Websites</h1>
-
-        <div class="gallery">
-            <div class="gallery__card">
-                <h2><a href="http://addogwalking.com" target="_blank">addogwalking.com</a></h2>
-                
-                <div class="gallery__card__container">
-                    <a href="http://addogwalking.com" target="_blank"><img src="images/website-screenshots/addogwalking.jpg" alt="addogwalking.com"></a>
-                    <p>This is the first website I made to go live onto the internet for my fiance so she could have somewhere to point people for her dog walking business.</p> 
-                    
-                    <p>I'm planning on fully redesigning it becasue the design was pretty basic and it wasnt as responsive as I liked. I have also learnt some new tricks like using scss for drier code and using media queries for more a more responsive website.</p>
-                </div>
-            </div>
-
-            <div class="gallery__card">
-                <h2><a href="http://jacobandaniela.com" target="_blank">jacobandaniela.com</a></h2>
-                
-                <div class="gallery__card__container">
-                    <a href="http://jacobandaniela.com" target="_blank"><img src="images/website-screenshots/jacobandaniela.jpg" alt="jacobandaniela.com"></a>
-                    <p>This is the second website I have put onto the internet made for mine and my fiance's wedding.</p> 
-                    
-                    <p>I am quite proud of how this one turned out asside from the rsvp fourm which I wanted to spend more time on to make it more user friendly but couldn't due to time restraints. I learnt a lot on this one like BEM naming conventions and using the sticky position to keep the location cards fixed while the landing pade scrolled.</p>
+                <div class="land__container__info">
+                    <button onclick="scrollToWebsites()"><h2>Web Development</h2></button>
+                    <button onclick="scrollToPhotos()"><h2>Photography</h2></button>
+                    <h2>Graphic Design</h2>
                 </div>
             </div>
         </div>
-    </section>
 
-    <div class="separator">
-        <svg class="separator__wave" viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)"/>
-        </svg>
-    </div>
-
-    <section id="photos">
-        <h1>Photos</h1>
-
-        <p class="center-text">I also do photography as a hobbie with my DSLR and vintage film camera so here are some photos shot and eddited by me.<br><strong>Click or tap a photo to enlarge it</strong></p>
-
-        <div class="gallery">
-            <button onclick="showImg1()"><img src="images/photos/thumbs/img1.jpg" class="vertical" alt="Guitar solo"></button>
-            <button onclick="showImg2()"><img src="images/photos/thumbs/img2.jpg" class="vertical" alt="Tree silhouette"></button>
-            <button onclick="showImg3()"><img src="images/photos/thumbs/img3.jpg" alt="Croud"></button>
-            <button onclick="showImg4()"><img src="images/photos/thumbs/img4.jpg" class="vertical" alt="Tree"></button>
-            <button onclick="showImg5()"><img src="images/photos/thumbs/img5.jpg" alt="Aniela"></button>
-            <button onclick="showImg6()"><img src="images/photos/thumbs/img6.jpg" alt="Guitar close"></button>
-            <button onclick="showImg7()"><img src="images/photos/thumbs/img7.jpg" class="vertical" alt="Skateboarder harsh lighting"></button>
+        <div class="separator">
+            <svg class="separator__wave" viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)" /></svg>
         </div>
-    </section>
 
-    <div class="separator">
-        <svg class="separator__wave" viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)"/>
-        </svg>
-    </div>
+        <section id="about">
+            <div class="text-container">
+                <h2>About me</h2>
 
-    <footer>
-        <h2>Feel free to contact me</h2>
-        <p><a href="mailto: jacob@d.awson.nz">jacob@d.awson.nz</a></p>
-    </footer>
+                <p>I'm an aspiring web developer with some amateur experience in photography and graphic design. I got interested in the web ever since I created my first html file in my digital technologies class at the beginning of high school. I have spent the past few years learning about creating responsive websites with html and css and javascript.</p>
+                <p>I am currently working full time at a caravan parts company called CAMEC as a warehouse storeman, shipping goods out to customers. I am looking foward to moving onto a career more focused on the web/technology and making it just a little bit more awesome.</p>
+                <p>Feel free to check out some of my work further down.</p>
+            </div>
+        </section>
 
-    <script src="js/colorToggle.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/photoViewer.js"></script>
-</body>
+        <div class="separator">
+            <svg class="separator__wave" viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)" /></svg>
+        </div>
+
+        <section id="websites">
+            <h2>Websites</h2>
+
+            <div class="gallery">
+                <div class="gallery__card">
+                    <h3><a href="http://jacobandaniela.com" target="_blank">Wedding invitation</a></h3>
+                    <div class="gallery__card__container">
+                        <a href="http://jacobandaniela.com" target="_blank"><img src="images/website-screenshots/jacobandaniela.jpg" alt="Wedding invitation" /></a>
+                        <p>This is the second website I have put onto the internet made for mine and my fiance's wedding.</p>
+
+                        <p>I am quite proud of how this one turned out asside from the rsvp fourm which I wanted to spend more time on to make it more user friendly but couldn't due to time restraints. I learnt a lot on this one like BEM naming conventions and using the sticky position to keep the location cards fixed while the landing pade scrolled.</p>
+                    </div>
+                </div>
+                <div class="gallery__card">
+                    <h3><a href="http://jacobandaniela.com/gallery" target="_blank">Weding gallery</a></h3>
+                    <div class="gallery__card__container">
+                        <a href="http://jacobandaniela.com/gallery" target="_blank"><img src="images/website-screenshots/gallery.jpg" alt="Wedding gallery" /></a>
+                        <p>I use this website to share wedding photos with friends and family. Its very conveinent having this website up as it always feels good that I can show anyone that has a phone my wedding photos.</p>
+
+                        <p>I really like the landing page with the logo that I made of our names but the filter menu is very unfriendly. Clicking a section looks like it'll take yopu to it or something but is takes it away which is very jarring.</p>
+                    </div>
+                </div>
+                <div class="gallery__card">
+                    <h3><a href="http://songs.dapper.nz/oceans" target="_blank">songs.dapper.nz</a></h3>
+                    <div class="gallery__card__container">
+                        <a href="http://songs.dapper.nz/oceans" target="_blank"><img src="images/website-screenshots/songs.jpg" alt="songs.dapper.nz" /></a>
+                        <p>I created this website for my churche's worship team. It's designed to create and edit worship songs while also storing the song in the url. This makes for an extermely long url (2000 characters in some cases) but makes the song you create somewhat easily shared.</p>
+
+                        <p>It is a work in progress and you cannot create songs just yet, only edit them. This website has be very helpful in drveloping my js skills as I had not used it much before then.</p>
+                    </div>
+                </div>
+                <div class="gallery__card">
+                    <h3><a href="http://papas-book.netlify.app/" target="_blank">Papa's book</a></h3>
+                    <div class="gallery__card__container">
+                        <a href="http://papas-book.netlify.app/" target="_blank"><img src="images/website-screenshots/papa.jpg" alt="Papa's book" /></a>
+                        <p>This website came about when my Grandad (Papa) passed. My Dad found a folder on his computer dating back to 2007 where Papa had started writing an autobiography titled "60 Years of School Holidays".</p>
+
+                        <p>I'm currently in the process of putting the 15 chapters of this book on the internet so anyone curious can read it. I'm sad I didn't find out about it when he was still alive as he had some files with notes on making a website which I wouldve loved doing with him.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator">
+            <svg class="separator__wave" viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)" /></svg>
+        </div>
+
+        <section id="photos">
+            <h2>Photos</h2>
+
+            <p class="center-text">I also do photography as a hobbie with my DSLR and vintage film camera so here are some photos shot and eddited by me.<br /><strong>Click or tap a photo to enlarge it</strong></p>
+
+            <div class="photos__gallery">
+                <button onclick="showImg1()" class="photos__gallery__tall">
+                    <img src="images/photos/thumbs/img1.jpg" alt="Guitar solo" />
+                </button>
+                <button onclick="showImg3()">
+                    <img src="images/photos/thumbs/img3.jpg" alt="Croud" />
+                </button>
+                <button onclick="showImg5()">
+                    <img src="images/photos/thumbs/img5.jpg" alt="Aniela" />
+                </button>
+                <button onclick="showImg2()" class="photos__gallery__tall">
+                    <img src="images/photos/thumbs/img2.jpg" alt="Tree silhouette" />
+                </button>
+                <button onclick="showImg4()" class="photos__gallery__tall">
+                    <img src="images/photos/thumbs/img4.jpg" alt="Tree" />
+                </button>
+                <button onclick="showImg7()" class="photos__gallery__tall">
+                    <img src="images/photos/thumbs/img7.jpg" alt="Skateboarder harsh lighting" />
+                </button>
+
+                <button onclick="showImg6()">
+                    <img src="images/photos/thumbs/img6.jpg" alt="Guitar close" />
+                </button>
+            </div>
+        </section>
+
+        <div class="separator">
+            <svg class="separator__wave" viewBox="0 0 7776 45"><path d="M7776,82V63.89c-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23-52.8-1.88-65.42-22.92-120-20.12-40.65,2.08-45.84,14.89-90,15.09-38.62.16-72.1-9.06-86.23-13-37.19-12-56.16-27-126-26.89-85.35.11-107,22.11-199.77,22.75-92.5.63-108.5-22.68-188-13.08-57.63,7-68.53,20.5-126,23.14-74.17,3.39-86.7-17.77-160-16.1-78.41,1.79-84.11,26.47-158,27.16-70.89.66-77.19-22-162-27.16-81.76-5-90.37,15.11-180,13.08-103.24-2.34-116-29.6-190-23.14-79.51,6.94-90.06,40.65-158,38.23C243.43,80,230.81,59,176.23,61.76c-40.65,2.08-45.84,14.89-90,15.09C47.61,77,14.13,67.79,0,63.89V82Z" transform="translate(0 -37)" /></svg>
+        </div>
+
+        <footer>
+            <h2>Feel free to contact me</h2>
+            <p><a href="mailto: jacob@dapper.nz">jacob@dapper.nz</a></p>
+        </footer>
+
+        <script src="js/colorToggle.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/photoViewer.js"></script>
+    </body>
 </html>
